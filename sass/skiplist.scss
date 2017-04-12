@@ -1,0 +1,42 @@
+#skip-links-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  z-index: 999;
+  overflow: hidden;
+    li {
+      background-color: rgba(0, 0, 0, 0.85098);
+      list-style: none;
+    }
+
+    li a {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.85098);
+      text-decoration: none;
+      border-image-source: initial;
+      border-image-slice: initial;
+      border-image-width: initial;
+      border-image-outset: initial;
+      border-image-repeat: initial;
+      clip: rect(0px 0px 0px 0px);
+      height: 1px;
+      position: absolute;
+      width: 1px;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      margin: -1px;
+      overflow: hidden;
+      padding: 5px 15px;
+    }
+
+    li a:hover,  li a:focus,  li a:active {
+      background-color: rgba(0, 0, 0, 0.85);
+      text-decoration: underline;
+      outline: dashed 1px;
+      height: auto;
+      overflow: auto;
+      position: static;
+      width: auto;
+    }
+}

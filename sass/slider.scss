@@ -1,0 +1,53 @@
+#donate-slider {
+	 height: 50px;
+	 border-radius: 50px;
+	 margin: 0 auto;
+	 margin-bottom: 48px;
+	 &.noUi-target {
+			background: #f9f9f9;
+			@include rwd-to ($medium) {
+				 margin: 0 15px 48px;
+			}
+	 }
+	 .noUi-base {
+			-webkit-box-shadow: inset 0px 2px 5px 0px rgba(164, 164, 164, 0.75);
+			-moz-box-shadow: inset 0px 2px 5px 0px rgba(164, 164, 164, 0.75);
+			box-shadow: inset 0px 2px 5px 0px rgba(164, 164, 164, 0.75);
+			border-radius: 30px;
+	 }
+	 .noUi-connect {
+			border-radius: 50px 0 0 50px;
+	 }
+	 .noUi-handle {
+			width: 48px;
+			height: 56px;
+			left: -24px;
+			top: -5px;
+			position: relative;
+	 }
+	 .noUi-handle:after,
+			.noUi-handle:before {
+			display: none;
+	 }
+	 .noUi-tooltip {
+			border: none;
+			color: $accent-color2;
+			position: absolute;
+			top: 12px;
+	 }
+}
+
+.donate-subtitle {
+	 font-size:  rem(16);
+	 position: relative;
+	 #set-value {
+			color: $accent-color2;
+			font-size:  rem(16);
+			position: absolute;
+			left: 0;
+			top: 0;
+	 }
+	 #changing-text {
+			padding-left: 40px;
+	 }
+}

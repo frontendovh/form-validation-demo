@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+	 <head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+
+			<title>Demo donate form</title>
+
+			<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+			<link rel="stylesheet" href="style.css" type="text/css" media="all"/>
+			<!--<link rel="stylesheet" href="http://basehold.it1/24">-->
+	 </head>
+	 <body>
+			<div id="skip-links-wrapper">
+				 <ol>
+						<li><a id="goto_menu" href="#main-nav-list" title="Przejdź do menu">Przejdź do menu</a></li>
+						<li><a id="goto_content" href="#main" title="Przejdź do treści">Przejdź do treści</a></li>
+				 </ol>
+			</div>
+			<header class="header">
+				 <div class="header-bar">
+						<div class="container">
+							 <div class="row">
+									<div class="col-xs-3 col-sm-4 col-md-4">
+										 <h1 id="main-logo"><a href="#"><span class="fa fa-heart"></span></a></h1>
+									</div>
+									<!--end .col-->
+									<div class="col-xs-9 col-sm-8 col-md-8">
+										 <div class="search-form-wrap">
+												<form id="search-form"  method="get" action="#">
+													 <fieldset class="clearfix">
+															<legend class="hidden">Search form</legend>
+															<div class="input-wrap">
+																 <label for="inner-search-input" class="hidden">Search</label>
+																 <input type="text" id="search-input" name="inner-search-input" placeholder="Search">
+															</div>
+															<button type="submit" id="search-btn" title="Click to search"><span class="sr-only">Search</span><span class="fa fa-search"></span></button>
+													 </fieldset>
+												</form>
+												<!--end .header-search-form-->
+												<a href="#" class="search-oppen-close-btn" title="Click to open/close search"><span class="sr-only">Search</span><span class="fa fa-search"></span><span class="fa fa-close"></span></a>
+										 </div>
+										 <!--end search-rorm-wrap-->
+									</div>
+									<!--end .col-->
+							 </div>
+							 <!--end .row-->
+						</div>
+						<!--end .container-->
+				 </div>
+				 <!--end .header-bar-->
+				 <div class="header-bar-nav">
+						<div class="container">
+							 <div class="row">
+									<nav id="main-nav" class="clearfix col-xs-12 col-sm-12 col-md-12">
+										 <a class="hamburger-menu" href="#">
+												<span class="sr-only">Otwórz / Zamknij Menu</span>
+												<span class="fa fa-bars show"></span>
+												<span class="fa fa-close"></span>
+										 </a>
+										 <ul class="quick-menu list-unstyled">
+												<li data-scroll="about"><a href="#about" >About</a></li>
+												<li data-scroll="wedding"><a href="#wedding" >Donate</a></li>
+												<li data-scroll="counter"><a href="#info" >Mission</a></li>
+												<li data-scroll="contact-info"><a href="#contact-info" >Members</a></li>
+												<li data-scroll="contact-info"><a href="#contact-info" >Contact</a></li>
+										 </ul>
+										 <!--end .quick-menu-->
+									</nav>
+							 </div>
+							 <!--end .row-->
+						</div>
+						<!--end .container-->
+				 </div>
+				 <!--end .header-bar-->
+
+			</header>
+			<main>
+				 <section  class="slider-section padding-2">
+						<div class="container">
+							 <div class="row">
+									<div class="col-md-8 col-md-offset-2">
+										 <form id="donate-form" method="post" action="#">
+												<fieldset>
+													 <legend class="hidden">Donate Form</legend>
+													 <h2 class="h3 section-title">Make a one-time donation</h2>
+													 <p class="donate-subtitle"><span id="set-value"></span> <span id="changing-text">A quality education changes lives</span></p>
+													 <div id="donate-slider">
+															<label for="donate" class="hidden">Donate</label>
+															<input class="hidden" type="text" id="slider-val-input" name="donate" value="">
+													 </div>
+													 <!--end #donate-slider-->
+
+													 <div class="person-details-container separator padding-2-btm">
+															<h4><span class="form-step-nr">2</span>Enter your information:</h4>
+															<div class="inputs-container clearfix">
+																 <div class="input-wrap">
+																		<label for="name">Name</label>
+																		<input data-validation="name" type="text" id="name" name="name" placeholder="First Last">
+																		<p class="error-description">Please enter your First and Last Name</p>
+																 </div>
+																 <!--end .input-wrap-->
+																 <div class="input-wrap">
+																		<label for="email">E-mail</label>
+																		<input data-validation="email" type="text" id="email" name="email" placeholder="your@email.com">
+																		<p class="error-description">Please enter a valid e-mail address</p>
+																 </div>
+																 <!--end .input-wrap-->
+																 <div class="input-wrap">
+																		<label for="phone">Phone</label>
+																		<input data-validation="phone"  type="text" id="phone" name="phone" placeholder="555 625 884">
+																		<p class="error-description">Please enter your phone number</p>
+																 </div>
+																 <!--end .input-wrap-->
+																 <div  class="input-wrap">
+																		<label for="city">Country</label>
+																		<input data-validation="country"  type="text" id="country" name="country" placeholder="United States">
+																		<p class="error-description">Please enter your country</p>
+																 </div>
+																 <!--end .input-wrap-->
+															</div>
+															<!--end .inputs-container-->
+													 </div>
+													 <!--end .person-details-container-->
+
+													 <div class="payment-method-container separator padding-2-btm">
+															<h4><span class="form-step-nr">3</span>Choose method of payment:</h4>
+															<div  class="input-wrap clearfix">
+																 <label for="pay-p">
+																		<input class="radio-input" type="radio" id="pay-p" value="paypal" name="payment-type" method="pay-by-paypal" checked="checked">
+																		<span class="radio-field"></span>
+																		<span class="radio-label-text">Donate by PayPal</span>
+																 </label>
+															</div>
+															<!--end .input-wrap-->
+
+															<div  class="input-wrap clearfix">
+																 <label for="pay-c">
+																		<input class="radio-input" type="radio" id="pay-c" value="card" name="payment-type" method="pay-by-card" >
+																		<span class="radio-field"></span>
+																		<span class="radio-label-text">Donate by Card</span>
+																 </label>
+															</div>
+															<!--end .input-wrap-->
+													 </div>
+													 <!--end .payment-method-container-->
+
+													 <div class="card-details-container separator padding-2-btm">
+															<h4><span class="form-step-nr">4</span>Enter your card details:</h4>
+															<div class="inputs-container clearfix">
+																 <div class="input-wrap">
+																		<label for="card-nr">Card number</label>
+																		<input data-validation="card-nr" type="text" id="card-nr" name="card-nr" placeholder="1234 5678 9012 3456" onfocus="this.placeholder = ''" onblur="this.placeholder = '1234 5678 9012 3456'">
+																		<p class="error-description">Please enter your card number</p>
+																 </div>
+																 <div class="input-wrap">
+																		<label for="card-ex">Expiration month and year</label>
+																		<input data-validation="card-ex" type="text" id="card-ex" name="card-ex" placeholder="MM/YY" onfocus="this.placeholder = ''" onblur="this.placeholder = 'MM/YY'">
+																		<p class="error-description">Please enter your card's expiration month and year</p>
+																 </div>
+																 <div class="input-wrap">
+																		<label for="card-cv">CVV number</label>
+																		<input data-validation="card-cv" type="text" id="card-cv" name="card-cv" placeholder="CVV" onfocus="this.placeholder = ''" onblur="this.placeholder = 'CVV'">
+																		<p class="error-description">Please enter the three-digit CVV number found on the back of your card</p>
+																 </div>
+																 <div  class="input-wrap">
+																		<label for="zip-code">ZIP code</label>
+																		<input data-validation="zip-code" type="text" id="zip-code" name="zip-code" placeholder="ZIP" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ZIP'">
+																		<p class="error-description">Please enter your ZIP code</p>
+																 </div>
+															</div>
+															<!--end .inputs-container-->
+													 </div>
+													 <!--end .card-details-container-->
+
+													 <button type="submit" id="donate-btn" class="btn-submit">Donate</button>
+												</fieldset>
+										 </form>
+										 <!--end #donate-form-->
+									</div>
+									<!--end .col-->
+							 </div>
+							 <!--end .row-->
+						</div>
+						<!--end container-->
+				 </section>
+				 <!--end .slider-section-->
+			</main>
+			<footer id="main-footer">
+				 <div class="container">
+						<div class="row">
+							 <div class="col-xs-12">
+									<ul class="soc-btn-list list-unstyled">
+										 <li><a href="#" title="Visit our profile on Twitter"><span class="fa fa-twitter"></span><span class="sr-only">Visit our profile on Twitter</span></a></li>
+										 <li><a href="#" title="Visit our profile on Facebook"><span class="fa fa-facebook"></span><span class="sr-only">Visit our profile on Facebook</span></a></li>
+										 <li><a href="#" title="Visit our profile on Youtube"><span class="fa fa-youtube"></span><span class="sr-only">Visit our profile on Youtube</span></a></li>
+										 <li><a href="#" title="Visit our profile on Twitter"><span class="fa fa-flickr"></span><span class="sr-only">Visit our profile on Flickr</span></a></li>
+										 <li><a href="#" title="Sent a message"><span class="fa fa-envelope"></span><span class="sr-only">Send a message</span></a></li>
+										 <li><a href="#" title="Add to rss"><span class="fa fa-rss"></span><span class="sr-only">Add to rss</span></a></li>
+									</ul>
+									<!--end .soc-btn-list-->
+							 </div>
+							 <!--end .col-->
+						</div>
+						<!--end .row-->
+				 </div>
+			</footer>
+
+			<script src="js/jquery-3.2.0.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/nouislider.min.js"></script>
+			<script src="js/wNumb.js"></script>
+			<script src="js/scripts.js"></script>
+	 </body>
+</html>
+
+
+<!--<a href="http://www.freepik.com/free-vector/lacy-borders-collection_790584.htm">Designed by Freepik</a>-->

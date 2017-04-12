@@ -1,0 +1,34 @@
+
+/* ================= Fonts mixins  =============== */
+// pixels to rem
+@function rem($pixels) {
+	 @return #{$pixels/$base-font-size}rem;
+}
+
+
+/* ================= RWD Mixins =============== */
+@mixin rwd-to($breakpoint) {
+	 @media only screen and (max-width: $breakpoint + px) {@content; }
+}
+@mixin rwd-to($break-point) {
+	 @media only screen and (max-width: $break-point + px) { @content; }
+}
+@mixin rwd-from($break-point) {
+	 @media only screen and (min-width: $break-point + px) { @content; }
+}
+@mixin rwd-from-to($break-point1,$break-point2) {
+	 @media only screen and (min-width: $break-point1 + px) and (max-width:$break-point2 + px) { @content; }
+}
+
+
+
+
+/* ================= Print Mixin =============== */
+@mixin print () {
+	 @media print { @content; }
+}
+
+@mixin transition($value) {
+	 -webkit-transition: $value;
+	 transition: $value;
+}

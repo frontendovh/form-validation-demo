@@ -1,0 +1,33 @@
+#main-footer {
+	 background-color: $footer-color2;
+	 .soc-btn-list {
+			float: right;
+			margin: 12px 0;
+			li {
+				 float: left;
+				 margin: 0 6px;
+				 a {
+						background-color: $accent-color;
+						color: #fff;
+						border-radius: 50%;
+						width: 30px;
+						height: 30px;
+						display: block;
+						text-align: center;
+						position: relative;
+						&:hover,
+							 &:focus {
+							 background-color: #000;
+						}
+						.fa {
+							 position: absolute;
+							 top: 50%;
+							 left: 0;
+							 right: 0;
+							 -webkit-transform: translateY(-50%);
+							 transform: translateY(-50%);
+						}
+				 }
+			}
+	 }
+}

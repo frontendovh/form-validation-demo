@@ -1,0 +1,200 @@
+header {
+	 .header-bar {
+			border-bottom: 1px solid #B3B3B3;
+			position: relative;
+			#main-logo {
+				 margin: 0;
+				 display: block;
+				 line-height: 1;
+				 font-size: rem(40);
+				 a {
+						font-size: rem(24);
+						padding: 12px;
+						border: 5px solid $accent-color;
+						color: $accent-color;
+						display: inline-block;
+						margin: 6px 12px;
+						&:hover,
+							 &:focus {
+							 background: #fff;
+						}
+				 }
+			}
+			.search-form-wrap {
+				 min-height: 71px;
+				 height: 100%;
+				 overflow: hidden;
+				 position: relative;
+			}
+			#search-form {
+				 width: 100%;
+				 padding-right: 46px;
+				 position: absolute;
+				 right: -100%;
+				 top: 50%;
+				 -webkit-transform: translateY(-50%);
+				 transform: translateY(-50%);
+				 -webkit-transition: right .2s ease;
+				 transition: all .2s ease;
+				 visibility: hidden;
+				 &.visible {
+						right: 0;
+						visibility: visible;
+				 }
+			}
+			fieldset {
+				 float: right;
+				 .input-wrap  {
+						width: calc(100% - 46px);
+						float: left;
+						padding: 5px 4px 6px 11px;
+						background-color: $accent-color;
+						input {
+							 max-width: 245px;
+							 width: 100%;
+							 height: 29px;
+							 color: #fff;
+							 padding: 0 15px;
+							 border-radius: 4px;
+							 border-top: 0;
+							 border-bottom: 1px solid rgb(236, 212, 156);
+							 border-left: 1px solid rgb(236, 212, 156);
+							 border-right: 0;
+
+							 background: rgba(218,157,3,1);
+							 background: -moz-linear-gradient(top, rgba(218,157,3,1) 0%, rgba(242,170,3,1) 100%);
+							 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(218,157,3,1)), color-stop(100%, rgba(242,170,3,1)));
+							 background: -webkit-linear-gradient(top, rgba(218,157,3,1) 0%, rgba(242,170,3,1) 100%);
+							 background: -o-linear-gradient(top, rgba(218,157,3,1) 0%, rgba(242,170,3,1) 100%);
+							 background: -ms-linear-gradient(top, rgba(218,157,3,1) 0%, rgba(242,170,3,1) 100%);
+							 background: linear-gradient(to bottom, rgba(218,157,3,1) 0%, rgba(242,170,3,1) 100%);
+							 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#da9d03', endColorstr='#f2aa03', GradientType=0 );
+
+							 &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+									color: #fff;
+							 }
+							 &::-moz-placeholder { /* Firefox 19+ */
+									color: #fff;
+							 }
+							 &:-ms-input-placeholder { /* IE 10+ */
+									color: #fff;
+							 }
+							 &:-moz-placeholder { /* Firefox 18- */
+									color: #fff;
+							 }
+						}
+				 }
+			}
+			.search-oppen-close-btn,
+			#search-btn {
+				 width: 46px;
+				 height: 40px;
+				 background-color: $accent-color;
+				 border: none;
+				 float: left;
+				 span {
+						color: #fff;
+						font-size: 24px;
+				 }
+				 &:hover,
+						&:focus {
+						background-color: #000;
+				 }
+			}
+			.search-oppen-close-btn  {
+				 text-align: center;
+				 position: absolute;
+				 right: 0px;
+				 top: 50%;
+				 -webkit-transform: translateY(-50%);
+				 transform: translateY(-50%);
+				 .fa-close {
+						display: none;
+						line-height: 36px;
+				 }
+				 .fa-search {
+						line-height: 36px;
+						display: block;
+				 }
+				 &.active-icon {
+						.fa-close {
+							 display: block;
+						}
+						.fa-search {
+							 display: none;
+						}
+				 }
+
+				 &:hover,
+						&:focus {
+						background-color: $accent-color;
+				 }
+				 &:hover span {
+						color: #000;
+				 }
+			}
+	 }
+	 .header-bar-nav {
+			border-bottom: 1px solid #B3B3B3;
+			#main-nav {
+				 text-align: center;
+				 height: 48px;
+				 position: relative;
+				 .quick-menu  {
+						display: inline-block;
+						margin: 0;
+						background-color: #fff;
+						&.visible {
+							 display: block;
+						}
+						@include rwd-to($medium) {
+							 display: none;
+							 z-index: 9999;
+							 position: absolute;
+							 top: 100%;
+							 right: 0;
+							 width: 100%;
+						}
+						> li {
+							 float: left;
+							 position: relative;
+							 @include rwd-to($medium) {
+									float: none;
+									border-top: 1px solid #e4e0e0;
+							 }
+							 &:last-child {
+									@include rwd-to($medium) {
+										 border-bottom: 1px solid #e4e0e0;
+									}
+							 }
+
+							 > a {
+									padding: 12px 24px;
+									text-transform: uppercase;
+									font-size: rem(18);
+									display: block;
+									position: relative;
+									&:hover,
+										 &:focus {
+										 color: $accent-color;
+										 background: #fff;
+										 &:before {
+												width: 100%;
+										 }
+									}
+									&:before {
+										 content: "";
+										 position: absolute;
+										 top: 0;
+										 left: 0;
+										 width: 0;
+										 height: 3px;
+										 background-color: $accent-color;
+										 transition: all .2s ease;
+									}
+							 }
+						}
+				 }
+			}
+	 }
+}
