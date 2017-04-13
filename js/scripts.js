@@ -51,13 +51,7 @@ $(document).ready(function () {
 			if (e.keyCode === 39) {// determine right arrow on keyboard
 				 startSlider.noUiSlider.set(parseInt(startSlider.noUiSlider.get().split('$')[1], 10) + 1);
 			}
-			if (e.keyCode === 37) {// determine left arrow on keyboard
-				 //set is uiSlider value - setting value of slider, 
-				 //parseInt changing string to digit,
-				 // get is uiSlider value which gets valu of slider,
-				 // split is splitting value of slider by $ and create an array
-				 // [1] gets value of element of array with index 1
-				 // of this value is substract 1
+			if (e.keyCode === 37) {
 				 startSlider.noUiSlider.set(parseInt(startSlider.noUiSlider.get().split('$')[1], 10) - 1);
 			}
 
